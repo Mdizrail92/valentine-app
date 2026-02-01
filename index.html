@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love - Dita💕</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a cinematic feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor">❤️</div>
+
+    <!-- Particle Background Container -->
+    <div id="particles-container"></div>
+
+    <!-- MAIN SECTIONS -->
+    <main>
+        <!-- 1️⃣ LANDING SECTION -->
+        <section id="landing" class="active">
+            <div class="glass-card">
+                <h1 id="landing-text"></h1>
+                <button id="begin-btn" class="primary-btn">Begin 💖</button>
+            </div>
+        </section>
+
+        <!-- 2️⃣ EMOTIONAL MESSAGE SECTION -->
+        <section id="emotional-message" class="hidden">
+            <div class="message-container">
+                <p class="fade-in-line">Sorry... for the mistakes I have done.</p>
+                <p class="fade-in-line">Thank you for standing beside me in my low times.</p>
+                <p class="fade-in-line">I promise I will be there for you in your low times too.</p>
+                <button id="next-btn" class="secondary-btn hidden">Continue ✨</button>
+            </div>
+        </section>
+
+        <!-- 3️⃣ THE VALENTINE QUESTION -->
+        <section id="valentine-question" class="hidden">
+            <div class="question-card">
+                <h2>Dita... <br> will you be my Valentine?</h2>
+                <div class="btn-group">
+                    <button id="yes-btn" class="primary-btn glow-btn">💖 YES</button>
+                    <button id="no-btn" class="no-btn">❌ NO</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4️⃣ YES CLICK SURPRISE & 5️⃣ FINAL HIDDEN SURPRISE -->
+        <section id="success-section" class="hidden">
+            <div class="success-content">
+                <h1 class="scale-fade">I knew you’d say yes 💕</h1>
+                <div class="success-image scale-fade">
+                    <img src="assets/add_id_in_middle.jpeg" alt="Love" class="rounded-img">
+                </div>
+                <p class="scale-fade">You already have my heart — today and always.</p>
+                <div id="heart-trigger" class="floating-heart">❤️</div>
+                <p class="tap-hint">Tap the heart</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FINAL HIDDEN MODAL -->
+    <div id="love-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="image-placeholder">
+                <img src="assets/last_surprise.jpeg" alt="Our Memory" class="modal-img">
+            </div>
+            <div class="handwritten-note">
+                <p>My Dearest Dita,</p>
+                <p>You are the best thing that ever happened to me. Thank you for being with me.</p>
+                <p>Forever yours,</p>
+                <p class="signature">Israil</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
