@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dita! 🎂 6th November Surprise ✨</title>
+    <meta name="description" content="A magical, interactive birthday surprise created with love for Dita on 6th November.">
+    <link rel="stylesheet" href="birthday.css">
+
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom Glowing Cursor -->
+    <div id="cursor" aria-hidden="true">✨</div>
+
+    <!-- Music Toggle Button (Web Audio synthesized soothing music) -->
+    <button id="music-toggle" class="music-btn" title="Toggle Birthday Melody" aria-label="Toggle Birthday Melody">
+        <span class="music-icon">🎵</span>
+        <span class="music-label">Birthday Music</span>
+    </button>
+
+    <!-- Navigation badge back to Valentine's -->
+    <a href="index.html" class="nav-switch-btn" title="View Valentine Page">
+        <span>💌 Valentine Memory</span>
+    </a>
+
+    <!-- Dynamic Particle & Balloons Background -->
+    <div id="particles-container" aria-hidden="true"></div>
+    <div id="balloons-container" aria-hidden="true"></div>
+
+    <!-- MAIN APP CONTAINER -->
+    <main id="app-container">
+
+        <!-- 1️⃣ ACT 1: GRAND BIRTHDAY LANDING -->
+        <section id="birthday-landing" class="screen active">
+            <div class="glass-card landing-card">
+                <div class="badge-pill">✨ Special Date • 6th November ✨</div>
+                <h1 id="birthday-typewriter" class="typing-header" aria-live="polite"></h1>
+                <p class="landing-subtext">A journey crafted with all my heart, made just for you.</p>
+                <button id="start-journey-btn" class="glow-primary-btn" id="btn-start">
+                    Unwrap Your Birthday Surprise 🎁
+                </button>
+            </div>
+        </section>
+
+        <!-- 2️⃣ ACT 2: EMOTIONAL BIRTHDAY TRIBUTE -->
+        <section id="emotional-tribute" class="screen hidden">
+            <div class="tribute-container">
+                <div class="candle-icon-header">🕯️</div>
+                <h2 class="section-title">Dearest Dita,</h2>
+                <div class="tribute-lines">
+                    <p class="fade-line">On this 6th of November, the world was blessed with the gentlest soul.</p>
+                    <p class="fade-line">Your laughter is the sweetest melody that brightens even my darkest days.</p>
+                    <p class="fade-line">Thank you for standing beside me, understanding me, and giving me your pure warmth.</p>
+                    <p class="fade-line">Every moment with you is a memory I treasure forever in my heart.</p>
+                </div>
+                <button id="to-reasons-btn" class="glow-primary-btn hidden">
+                    Discover What Makes You Special ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- 3️⃣ ACT 3: BEST THINGS ABOUT YOU (INTERACTIVE REVEAL) -->
+        <section id="special-things" class="screen hidden">
+            <div class="special-container">
+                <h2 class="section-title">The Best Things About You 💕</h2>
+                <p class="section-subtitle">Tap each card to unlock the magic inside:</p>
+
+                <div class="cards-grid">
+                    <div class="special-card" data-index="1" tabindex="0" role="button" aria-label="Card 1: Your Radiant Smile">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-icon">🌸</span>
+                                <h3>Your Radiant Smile</h3>
+                                <span class="tap-badge">Tap to read</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>Your Radiant Smile</h3>
+                                <p>The way your eyes twinkle and your genuine laugh fills the room. It has the power to turn any ordinary day into sunshine.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-card" data-index="2" tabindex="0" role="button" aria-label="Card 2: Your Caring Heart">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-icon">💖</span>
+                                <h3>Your Gentle Heart</h3>
+                                <span class="tap-badge">Tap to read</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>Your Gentle Heart</h3>
+                                <p>The empathy and softness you hold for everyone around you. Having you in my life makes me want to be the best version of myself.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-card" data-index="3" tabindex="0" role="button" aria-label="Card 3: My Safe Haven">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-icon">🏡</span>
+                                <h3>My Safe Haven</h3>
+                                <span class="tap-badge">Tap to read</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>My Safe Haven</h3>
+                                <p>No matter how chaotic life gets, just talking to you brings peace to my restless mind. With you, I am always home.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-card" data-index="4" tabindex="0" role="button" aria-label="Card 4: Our Unbreakable Bond">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-icon">✨</span>
+                                <h3>Our Journey</h3>
+                                <span class="tap-badge">Tap to read</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>Our Journey</h3>
+                                <p>Every shared conversation, every laugh, every moment of growing together. I wouldn't trade our bond for anything in this universe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-footer">
+                    <p id="cards-counter" class="cards-hint">Revealed: <span id="revealed-count">0</span> / 4</p>
+                    <button id="to-cake-btn" class="glow-primary-btn disabled-btn" disabled>
+                        Make Your Birthday Wish 🎂
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4️⃣ ACT 4: INTERACTIVE BIRTHDAY CAKE & WISH MAKING -->
+        <section id="birthday-cake-section" class="screen hidden">
+            <div class="cake-stage">
+                <div class="badge-pill">🕯️ Time to Celebrate 🕯️</div>
+                <h2 id="cake-instruction" class="section-title">Close your eyes, make a wish...</h2>
+                <p id="cake-subinstruction" class="section-subtitle">Then tap the candle to blow it out! 💨</p>
+
+                <!-- Interactive CSS Birthday Cake -->
+                <div id="interactive-cake" class="cake-container" role="button" tabindex="0" aria-label="Birthday Cake - Tap to blow out the candles">
+                    <div class="plate"></div>
+                    <div class="cake-tier tier-bottom">
+                        <div class="frosting-strip"></div>
+                        <div class="berry berry-1">🍓</div>
+                        <div class="berry berry-2">🍓</div>
+                        <div class="berry berry-3">🍓</div>
+                    </div>
+                    <div class="cake-tier tier-top">
+                        <div class="frosting-strip"></div>
+                        <div class="cream-drop drop-1"></div>
+                        <div class="cream-drop drop-2"></div>
+                        <div class="cream-drop drop-3"></div>
+                    </div>
+                    <div class="candle">
+                        <div id="flame" class="flame lit"></div>
+                        <div id="smoke" class="smoke hidden"></div>
+                    </div>
+                </div>
+
+                <div id="wish-celebration" class="wish-reveal hidden">
+                    <h3 class="sparkle-text">🎉 YAAAY! Happy Birthday Dita! 🎉</h3>
+                    <p>May all your heartfelt prayers, silent dreams, and deepest wishes come true this year!</p>
+                    <button id="to-question-btn" class="glow-primary-btn">
+                        There's One More Fun Question 🙈
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5️⃣ ACT 5: PLAYFUL RUNAWAY QUESTION -->
+        <section id="playful-question" class="screen hidden">
+            <div class="question-box glass-card">
+                <span class="question-icon">🥰</span>
+                <h2>Dita...<br>Are you ready to see who loves you the most?</h2>
+                <p class="question-sub">Choose wisely! 😉</p>
+
+                <div class="action-buttons">
+                    <button id="yes-birthday-btn" class="glow-primary-btn">
+                        💖 YES, SHOW ME!
+                    </button>
+                    <button id="runaway-btn" class="runaway-button">
+                        Maybe Later 🙈
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6️⃣ ACT 6: PICTURE CELEBRATION & FINAL GIFT TRIGGER -->
+        <section id="birthday-memory-section" class="screen hidden">
+            <div class="memory-stage">
+                <div class="badge-pill">🎂 6th November Celebration 🎂</div>
+                <h2 class="grand-birthday-title">Happy Birthday, My Beloved Dita! ❤️</h2>
+
+                <div class="art-frame-container scale-pop">
+                    <div class="sparkle-orbit orbit-1">✨</div>
+                    <div class="sparkle-orbit orbit-2">💖</div>
+                    <img src="assets/add_id_in_middle.jpeg" alt="Israil and Dita Art Illustration" class="memory-art-img">
+                </div>
+
+                <p class="romantic-caption">
+                    "Every year on 6th November, I'm reminded of just how blessed I am to have you in my story."
+                </p>
+
+                <div class="secret-gift-wrapper">
+                    <div id="gift-box-trigger" class="gift-box" role="button" tabindex="0" aria-label="Open your secret birthday letter">
+                        <div class="gift-lid">🎀</div>
+                        <div class="gift-body">🎁</div>
+                    </div>
+                    <p class="gift-hint">Tap the gift box for your final secret letter 💌</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 7️⃣ FINAL POPUP MODAL: HANDWRITTEN LETTER & REAL PHOTO -->
+    <div id="birthday-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button id="close-modal-btn" class="modal-close-btn" aria-label="Close Letter">&times;</button>
+            
+            <div class="modal-body-scroll">
+                <div class="polaroid-wrapper">
+                    <div class="photo-container">
+                        <img src="assets/last_surprise.jpeg" alt="Israil and Dita Sweet Memory" class="polaroid-img">
+                    </div>
+                    <div class="polaroid-caption">Forever with you 💕 • 6th Nov</div>
+                </div>
+
+                <div class="letter-content">
+                    <div class="letter-header">My Dearest Dita,</div>
+                    <p>Happy Birthday to the most extraordinary, precious woman in my entire world!</p>
+                    <p>On this 6th of November, I just want to remind you how deeply loved and appreciated you are. You bring so much serenity, joy, and meaning into my life.</p>
+                    <p>Thank you for all the kindness you show me, for your sweet patience, and for loving me just as I am. I promise to always protect your smile, stand firmly by your side through every season, and celebrate you not just today, but every single day of our lives.</p>
+                    <p>May your new year be overflowing with barakah, boundless joy, good health, and dreams fulfilled. Happy Birthday, my sunshine! 🎂✨</p>
+                    
+                    <div class="letter-signature">
+                        <span>Forever yours,</span>
+                        <span class="author-name">Israil ❤️</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="modal-celebrate-btn" class="glow-primary-btn small-btn">
+                    Shower More Confetti! 🎊
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="birthday.js"></script>
+</body>
+
+</html>
