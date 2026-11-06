@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const textLines = [
         "Dearest Dita... 🌸",
         "Today is 6th November ✨",
-        "The day the world was gifted your beautiful soul."
+        "The day a girl from Palembang changed my world. 🌏"
     ];
     let lineIdx = 0;
     let charIdx = 0;
@@ -369,11 +369,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Playfully encourage YES
         const playfulPhrases = [
-            "Are you sure? 😜",
-            "Try again! 🙈",
-            "Nice try, Dita! 😄",
-            "Almost caught me! 💨",
-            "Just say YES! 💖"
+            "Are you sure, Dita? 😜",
+            "Nice try! 🙈",
+            "You know the answer! 😄",
+            "It's Israil, isn't it? 💨",
+            "Just say YES lah! 💖"
         ];
         runawayBtn.textContent = playfulPhrases[Math.floor(Math.random() * playfulPhrases.length)];
 
